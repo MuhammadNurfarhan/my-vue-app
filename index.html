@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Vue 3 for beginner</title>
+</head>
+<body>
+  <h1 class="title">Hello vue</h1>
+  <section id="app">
+    <div>
+      <h3>{{ username }}</h3>
+      <button @click="changeUsername">Change username</button>
+    </div>
+    <hr>
+    <div>
+      <h3>Products</h3>
+      <input type="text" v-model="searchQuery" placeholder="Search">
+      <div class="loading" v-if="isLoading">
+        Loading products...
+      </div>
+      <div v-else class="card-products">
+        <div 
+          class="card" 
+          v-for="product in filteredProducts"
+          :key="product.id"
+          v-if="filteredProducts.length > 0"
+        >
+          <img v-bind:src="product.thumb" class="card-thumb">
+          <h3>{{ product.name }}</h3>
+          <p>${{ product.price }}</p>
+        </div>
+        <div v-else>
+          <p>No products found</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>© 2024 Farhan. All rights reserved.</p>
+    </footer>
+  </section>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

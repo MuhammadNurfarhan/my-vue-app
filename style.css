@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#app {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+.card-products {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.card {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 100px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+.card .card-thumb {
+  width: 180px;
+  height: 100%;
+}
+Button {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: #57aaee;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+input {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+.container {
+  z-index: 9999;
+}
